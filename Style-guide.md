@@ -36,10 +36,6 @@ Widt from desing :
 - Weights: 400, 500.
 
 
-@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500&display=swap');
-
-font-family: 'Familjen Grotesk', sans-serif;
-
 ## Title hero:
 background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%);
 -webkit-background-clip: text;

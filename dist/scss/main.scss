@@ -1,8 +1,17 @@
-$color-BG:#1e1e1e;
-$color-body-white:#ffff;
-$color-gradient:linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%);
-$fonts-weights:(
-"Title":500,
-"Body":400,
-);
+@import "./nav-bar";
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500&display=swap');
+html {
+  box-sizing: border-box;
+  font-family: 'Familjen Grotesk', sans-serif;
+}
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: grey;
+}

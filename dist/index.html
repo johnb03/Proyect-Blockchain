@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+    <link rel="stylesheet" href="/dist/css/normalize.css">
     <link rel="stylesheet" href="/dist/css/main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/js/menu.js"></script>
     <title>Proyect Blockchain</title>
+
 </head>
+
 <body>
-   
-    
+    <header id="main-header">
+        <nav id="main-nav" class="nav">
+            <picture class="nav__pic"><img src="/assets/logo.png" alt="logo" class="nav__logo"></picture>
+            <ul class="nav__menu nav__menu-visible">
+                <li class="nav__item"><a aria-label="link-menu" href="#" class="nav__link nav__link-wrap">Smart
+                        Contracts</a></li>
+                <li class="nav__item"><a aria-label="link-menu" href="#" class="nav__link ">Services</a></li>
+                <li class="nav__item"><a aria-label="link-menu" href="#" class="nav__link bg-link">Solution</a></li>
+                <li class="nav__item"><a aria-label="link-menu" href="#" class="nav__link">Roadmap</a></li>
+                <li class="nav__item"><a aria-label="link-menu" href="#" class="nav__link ">Whitepapaer</a></li>
+            </ul>
+
+            <button class="ham"><img class="ham-img" aria-label="Abrir menu" src="/assets/Ham.png"
+                    alt="ham-menu"></button>
+
+            <div class="nav__socialM">
+                <a href="#" class="nav__social-link">
+                    <img src="/assets/mdi_github.svg" class="social">
+                </a>
+                <a href="#" class="nav__social-link">
+                    <img src="/assets/mdi_discord.svg" class="social">
+                </a>
+                <a href="#" class="nav__social-link">
+                    <img src="/assets/mdi_reddit.svg" class="social">
+                </a>
+                <a href="#" class="nav__social-link">
+                    <img src="/assets/mdi_twitter.svg" class="social">
+                </a>
+            </div>
+
+        </nav>
+
+    </header>
+    <div class="container">
+        <section id="main-section">
+            <article class="poster">
+                <div class="poster__title">
+                    <h1 class="title">A fast blockchain.</h1>
+                    <p class="copy">Our technology performing fast blockchain
+                        (<spam>120</spam>K TPS) and it has guaranted AI-based
+                        data security. Proof of State, its consensus algorithenables
+                        unlimited speeds. </p>
+
+                    <div class="poster__buttons">
+                        <button class="button border-grad">Get Started</button>
+                        <button class="button">Ecosistem</button>
+                    </div>
+                    <div class="blurs">
+                        <div class="blur color-1"></div>
+                        <div class="blur color-2"></div>
+                        <div class="blur color-3"></div>
+                    </div>
+
+                    <picture>
+                        <source media="(min-width:1024px )" srcset="/assets/bg-hero-1.png">
+                        <source media="(max-width:1024px )" srcset="/assets/bg-hero-2-mobile.png">
+                        <img src="/assets/bg-hero-1.png" alt="hero-image">
+                    </picture>
+                </div>
+            </article>
+        </section>
+    </div>
+
+
 </body>
+
 </html>
