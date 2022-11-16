@@ -3,7 +3,7 @@
 .nav {
   width: 100%;
   display: flex;
-  padding: 15px;
+  padding: 20px;
   justify-content: space-around;
   align-items: center;
   background: transparent;
@@ -23,7 +23,6 @@
 
   .nav__item {
     list-style: none;
-    padding-left: 3rem;
   }
 
   .nav__link {
@@ -34,10 +33,11 @@
   }
 
   .bg-link {
-    background: gold;
+    background: $color-Light-magenta;
     padding: 8px;
     border-radius: 8px;
-    color: $color-BG;
+    color: $color-body-white;
+    text-shadow: 2px 2px 10px rgb(89, 5, 89);
   }
 
   .nav__socialM {
@@ -46,7 +46,6 @@
 
     .nav__social-link {
       margin-top: 10px;
-
     }
   }
 
@@ -81,33 +80,29 @@
       width: 100%;
       height: calc(100% - 60px);
       position: fixed;
-      border-radius: 30%;
-      left: 0;
+      font-size: 1.5rem;
       left: 100%;
       top: 60px;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
+      text-align: center;
       justify-content: center;
+      gap: 2.5rem;
       background: black;
       transition: left 0.3s;
       overflow-y: auto;
       z-index: 20;
-      display: none;
     }
 
     .nav__menu-visible {
-      left: 400px;
+      left: 0;
     }
 
     .nav__socialM {
-    
-      width: 100vw;
-      position: fixed;
-      justify-content: center;
-      top: 3em;
-      // right: 2em;
-      
-
+      position: absolute;
+      flex-direction: column;
+      right: 1rem;
+      top: 8rem;
     }
 
     .ham {
@@ -118,15 +113,9 @@
 
 @media (max-width: 37.5em) {
   .nav {
-    .nav__menu-visible {
-      left: 160px;
-    }
-
-    .nav__link-wrap{
+    .nav__link-wrap {
       width: 100px;
       display: flex;
-     
-      
     }
   }
 }

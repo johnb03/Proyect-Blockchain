@@ -16,7 +16,7 @@
     <header id="main-header">
         <nav id="main-nav" class="nav">
             <picture class="nav__pic"><img src="/assets/logo.png" alt="logo" class="nav__logo"></picture>
-            <ul class="nav__menu nav__menu-visible">
+            <ul class="nav__menu">
                 <li class="nav__item"><a aria-label="link-menu" href="#" class="nav__link nav__link-wrap">Smart
                         Contracts</a></li>
                 <li class="nav__item"><a aria-label="link-menu" href="#" class="nav__link ">Services</a></li>
@@ -46,35 +46,37 @@
         </nav>
 
     </header>
-    <div class="container">
-        <section id="main-section">
-            <article class="poster">
+    <section id="main-section">
+        <article>
+            <div class="container">
                 <div class="poster__title">
-                    <h1 class="title">A fast blockchain.</h1>
+                    <h1 class="title">
+                        <spam class="title-bg">A Fast Blockchain</spam> Scalable AI.
+                    </h1>
                     <p class="copy">Our technology performing fast blockchain
                         (<spam>120</spam>K TPS) and it has guaranted AI-based
                         data security. Proof of State, its consensus algorithenables
                         unlimited speeds. </p>
 
                     <div class="poster__buttons">
-                        <button class="button border-grad">Get Started</button>
-                        <button class="button">Ecosistem</button>
+                        <button class="cta border-grad">Get Started</button>
+                        <button class="cta bg-botton__bl">Ecosistems</button>
                     </div>
-                    <div class="blurs">
-                        <div class="blur color-1"></div>
-                        <div class="blur color-2"></div>
-                        <div class="blur color-3"></div>
-                    </div>
-
-                    <picture>
-                        <source media="(min-width:1024px )" srcset="/assets/bg-hero-1.png">
-                        <source media="(max-width:1024px )" srcset="/assets/bg-hero-2-mobile.png">
-                        <img src="/assets/bg-hero-1.png" alt="hero-image">
-                    </picture>
                 </div>
-            </article>
-        </section>
-    </div>
+
+                <div class="blurs">
+                    <div class="blur blur-color__1"></div>
+                    <div class="blur blur-color__2"></div>
+                    <div class="blur blur-color__3"></div>
+                </div>
+
+                <div class="poster__hero">
+
+                </div>
+
+            </div>
+        </article>
+    </section>
 
 
 </body>

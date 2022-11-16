@@ -2,7 +2,7 @@
 .nav {
   width: 100%;
   display: flex;
-  padding: 15px;
+  padding: 20px;
   justify-content: space-around;
   align-items: center;
   background: transparent;
@@ -20,7 +20,6 @@
 }
 .nav .nav__item {
   list-style: none;
-  padding-left: 3rem;
 }
 .nav .nav__link {
   color: white;
@@ -29,10 +28,11 @@
   font-size: 1.1em;
 }
 .nav .bg-link {
-  background: gold;
+  background: #fc4ff6;
   padding: 8px;
   border-radius: 8px;
-  color: #1e1e1e;
+  color: white;
+  text-shadow: 2px 2px 10px rgb(89, 5, 89);
 }
 .nav .nav__socialM {
   display: flex;
@@ -69,36 +69,33 @@
     width: 100%;
     height: calc(100% - 60px);
     position: fixed;
-    border-radius: 30%;
-    left: 0;
+    font-size: 1.5rem;
     left: 100%;
     top: 60px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     justify-content: center;
+    gap: 2.5rem;
     background: black;
     transition: left 0.3s;
     overflow-y: auto;
     z-index: 20;
-    display: none;
   }
   .nav .nav__menu-visible {
-    left: 400px;
+    left: 0;
   }
   .nav .nav__socialM {
-    width: 100vw;
-    position: fixed;
-    justify-content: center;
-    top: 3em;
+    position: absolute;
+    flex-direction: column;
+    right: 1rem;
+    top: 8rem;
   }
   .nav .ham {
     display: block;
   }
 }
 @media (max-width: 37.5em) {
-  .nav .nav__menu-visible {
-    left: 160px;
-  }
   .nav .nav__link-wrap {
     width: 100px;
     display: flex;
@@ -116,5 +113,173 @@ html {
 }
 
 body {
-  background: grey;
+  background: #000;
+}
+
+.container {
+  width: 98%;
+  height: 95vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+}
+.container .poster__title {
+  color: white;
+  z-index: 10;
+}
+.container .poster__title .title {
+  width: 18rem;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 3rem;
+  margin-top: 1.5rem;
+  font-size: clamp(2.72rem, 2.49rem + 1.18vw, 3.66rem);
+  margin-bottom: 2rem;
+}
+.container .poster__title .title .title-bg {
+  background: linear-gradient(90deg, #ff3bff 0%, #ecbfbf 38.02%, #5c24ff 75.83%, #d94fd5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+@media screen and (min-width: 48em) {
+  .container .poster__title .title {
+    width: 30rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .container .poster__title .title {
+    width: 40rem;
+    line-height: 3.5rem;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+  }
+}
+.container .poster__title .copy {
+  width: 18rem;
+  margin: 0 auto;
+  font-size: clamp(1.09rem, 1.07rem + 0.13vw, 1.2rem);
+  font-weight: 400;
+  line-height: 2rem;
+  word-spacing: 3px;
+  padding: 8px;
+  margin-bottom: 3rem;
+  text-shadow: 1px 2px #1e1e1e;
+}
+@media screen and (min-width: 48em) {
+  .container .poster__title .copy {
+    width: 28rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .container .poster__title .copy {
+    width: 40rem;
+    line-height: 2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+.container .poster__buttons .cta {
+  border: 2.8px solid;
+  border-radius: 30px;
+  padding: 15px 25px;
+  margin-left: 5px;
+  background: transparent;
+  color: white;
+  border-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .poster__buttons .border-grad {
+  padding: 15px 25px;
+  border: solid 3px transparent;
+  background-image: linear-gradient(90deg, #ff3bff 0%, #ecbfbf 38.02%, #5c24ff 75.83%, #d94fd5 100%);
+  background-origin: border-box;
+  box-shadow: 2px 1000px 1px #000 inset;
+}
+.container .poster__buttons .bg-botton__bl {
+  background: black;
+}
+.container .poster__buttons .cta:focus {
+  color: #ecbfbf;
+  background: #000;
+  border-color: white;
+  box-shadow: 0px 0px 0px 1px #ff3bff;
+  -webkit-animation: anim-shadows 0.3s ease-out forwards;
+          animation: anim-shadows 0.3s ease-out forwards;
+}
+@-webkit-keyframes anim-shadows {
+  100% {
+    box-shadow: 0px 0px 50px 20px #200120;
+  }
+}
+@keyframes anim-shadows {
+  100% {
+    box-shadow: 0px 0px 50px 20px #200120;
+  }
+}
+.container .blurs {
+  width: 100%;
+  min-width: 300px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: -20;
+  bottom: 6rem;
+  padding: 0px 50px 0px 50px;
+}
+@media screen and (min-width: 75em) {
+  .container .blurs {
+    justify-content: space-around;
+    padding: 0px 200px 0px 200px;
+  }
+}
+.container .blurs .blur {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+@media screen and (min-width: 48em) {
+  .container .blurs .blur {
+    width: 200px;
+    height: 200px;
+    filter: blur(100px);
+  }
+}
+.container .blurs .blur-color__1 {
+  background-color: #8593e8;
+}
+.container .blurs .blur-color__2 {
+  background-color: #5d6ef3;
+}
+.container .blurs .blur-color__3 {
+  background-color: #fc4ff6;
+}
+.container .poster__hero {
+  width: 85%;
+  height: 40vh;
+  max-height: 550px;
+  left: 1.8em;
+  bottom: 0;
+  position: absolute;
+  background-image: url(/assets/bg-hero-1.png);
+  background-position: bottom;
+  background-size: 100% 40%;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 48em) {
+  .container .poster__hero {
+    background-size: 100% 70%;
+    left: 3.5em;
+  }
+}
+@media screen and (min-width: 75em) {
+  .container .poster__hero {
+    height: 75vh;
+    background-size: 100% 80%;
+    left: 7em;
+  }
 }/*# sourceMappingURL=main.css.map */

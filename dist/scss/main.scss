@@ -1,9 +1,9 @@
 @import "./nav-bar";
 @import "./variables";
-@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500&display=swap");
 html {
   box-sizing: border-box;
-  font-family: 'Familjen Grotesk', sans-serif;
+  font-family: "Familjen Grotesk", sans-serif;
 }
 
 *,
@@ -13,5 +13,190 @@ html {
 }
 
 body {
-  background: grey;
+  background: $color-BG;
+}
+
+.container {
+  width: 98%;
+  height: 95vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+
+  .poster__title {
+    color: $color-body-white;
+    z-index: 10;
+
+    .title {
+      width: 18rem;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 3rem;
+      margin-top: 1.5rem;
+      font-size: $--step-4;
+      margin-bottom: 2rem;
+
+      //text-color-bg
+      .title-bg {
+        background: linear-gradient(
+          90deg,
+          #ff3bff 0%,
+          #ecbfbf 38.02%,
+          #5c24ff 75.83%,
+          #d94fd5 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      //media
+      @include tablet {
+        width: 30rem;
+      }
+
+      @include Desktop {
+        width: 40rem;
+        line-height: 3.5rem;
+        margin-bottom: 0;
+        margin-top: 1.5rem;
+      }
+    }
+
+    .copy {
+      width: 18rem;
+      margin: 0 auto;
+      font-size: $--step--1;
+      font-weight: 400;
+      line-height: 2rem;
+      word-spacing: 3px;
+      padding: 8px;
+      margin-bottom: 3rem;
+      text-shadow: 1px 2px #1e1e1e;
+
+      //media
+      @include tablet {
+        width: 28rem;
+      }
+
+      @include Desktop {
+        width: 40rem;
+        line-height: 2rem;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .poster__buttons {
+    .cta {
+      border: 2.8px solid;
+      border-radius: 30px;
+      padding: 15px 25px;
+      margin-left: 5px;
+      background: transparent;
+      color: $color-body-white;
+      border-color: $color-body-white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .border-grad {
+      padding: 15px 25px;
+      border: solid 3px transparent;
+      background-image: linear-gradient(
+        90deg,
+        #ff3bff 0%,
+        #ecbfbf 38.02%,
+        #5c24ff 75.83%,
+        #d94fd5 100%
+      );
+      background-origin: border-box;
+      box-shadow: 2px 1000px 1px $color-BG inset;
+    }
+
+    .bg-botton__bl {
+      background: black;
+    }
+
+    //animation
+    .cta:focus {
+      color: #ecbfbf;
+      background: $color-BG;
+      border-color: $color-body-white;
+      box-shadow: 0px 0px 0px 1px #ff3bff;
+      animation: anim-shadows 0.3s ease-out forwards;
+    }
+
+    @keyframes anim-shadows {
+      100% {
+        box-shadow: 0px 0px 50px 20px #200120;
+      }
+    }
+  }
+
+  .blurs {
+    width: 100%;
+    min-width: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: -20;
+    bottom: 6rem;
+    padding: 0px 50px 0px 50px;
+
+    @include Desktop {
+      justify-content: space-around;
+      padding: 0px 200px 0px 200px;
+    }
+
+    .blur {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      filter: blur(80px);
+
+      @include tablet {
+        width: 200px;
+        height: 200px;
+        filter: blur(100px);
+      }
+    }
+
+    .blur-color__1 {
+      background-color: $color-Light-blue;
+    }
+
+    .blur-color__2 {
+      background-color: $color-soft-blue;
+    }
+
+    .blur-color__3 {
+      background-color: $color-Light-magenta;
+    }
+  }
+
+  .poster__hero {
+    width: 85%;
+    height: 40vh;
+    max-height: 550px;
+    left: 1.8em;
+    bottom: 0;
+    position: absolute;
+    background-image: url(/assets/bg-hero-1.png);
+    background-position: bottom;
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      background-size: 100% 70%;
+      left: 3.5em;
+    }
+    @include Desktop {
+      height: 75vh;
+      background-size: 100% 80%;
+      left: 7em;
+    }
+  }
 }
